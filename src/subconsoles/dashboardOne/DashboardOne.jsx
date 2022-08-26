@@ -1,8 +1,9 @@
-import { Box, Grid } from '@mui/material'
+import { Box, Grid, Paper } from '@mui/material'
 import React from 'react'
 import TopBrief from './components/TopBrief'
 
 import { topBrief_props as topBrief_data  } from '../../data/dashboard1'
+import TotalRevenue from './components/TotalRevenue'
 
 const DashboardOne = () => {
   return (
@@ -24,7 +25,10 @@ const DashboardOne = () => {
                     )
                 })
             }
-            
+        
+            <Grid item xs={12} md={8} >
+                <TotalRevenue/>
+            </Grid>
         </Grid>
         
     </Box>
