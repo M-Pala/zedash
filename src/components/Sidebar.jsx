@@ -16,7 +16,7 @@ const SidebarPaper = styled(Paper)(({theme})=>({
 }))
 
 const Sidebar = () => {
-    const [sidebarOpen, setSidebarOpen] = useState(true)
+    const [sidebarOpen, setSidebarOpen] = useState(false)
     return (
         <>
     <Box sx={{width: sidebarOpen ? '15rem' : '4rem', position: 'relative'
