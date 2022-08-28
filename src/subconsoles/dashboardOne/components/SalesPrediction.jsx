@@ -24,12 +24,10 @@ export const topBrief_data_4 = [
 ];
 
 const data = [
-    { name: 'Group A', value: 400 },
-    { name: 'Group B', value: 300 },
-    { name: 'Group C', value: 300 },
-    { name: 'Group D', value: 200 },
+    { name: 'total', value: 76 },
+    { name: 'remaining', value: 100-76 },
   ];
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+  const COLORS = ['#0088ff', '#eee'];
 
 const SalesPrediction = () => {
   return (
@@ -51,18 +49,19 @@ const SalesPrediction = () => {
             <Typography variant='caption'>(160-155 Sales)</Typography>
         </Box>
         
-        <PieChart width={120} height={200}>
         
-            <Pie
+      <PieChart width={150} height={100}>
+      
+      <Pie
             data={data}
-            cx={0}
-            cy={200}
+            cx='50%'
+            cy='100%'
             startAngle={180}
             endAngle={0}
-            innerRadius={60}
-            outerRadius={80}
+            innerRadius={40}
+            outerRadius={60}
             fill="#8884d8"
-            paddingAngle={5}
+            // paddingAngle={5}
             dataKey="value"
             >
             {data.map((entry, index) => (
