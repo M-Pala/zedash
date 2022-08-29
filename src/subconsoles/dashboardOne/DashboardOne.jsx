@@ -5,6 +5,7 @@ import TopBrief from './components/TopBrief'
 import { topBrief_props as topBrief_data  } from '../../data/dashboard1'
 import TotalRevenue from './components/TotalRevenue'
 import SalesPrediction from './components/SalesPrediction'
+import SalesDifference from './components/SalesDifference'
 
 const DashboardOne = () => {
   return (
@@ -30,9 +31,11 @@ const DashboardOne = () => {
                 <TotalRevenue/>
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={4} sx={{display:'flex',flexWrap:'wrap',gap:2}}>
                 <SalesPrediction/>
+                <SalesDifference/>
             </Grid>
+            
         </Grid>
         
     </Box>
