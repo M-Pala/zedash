@@ -3,26 +3,6 @@ import React from 'react'
 // import { Bar, BarChart, Cell, Pie, PieChart, Tooltip } from 'recharts'
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 
-export const topBrief_data_4 = [
-    {
-        hits: 8850,
-    }, {
-        hits: 8219,
-    }, {
-        hits: 8285,
-    }, {
-        hits: 7181,
-    }, {
-        hits: 7413,
-    }, {
-        hits: 3060,
-    }, {
-        hits: 1981,
-    }, {
-        hits: 4506,
-    },
-];
-
 const data = [
     { name: 'total', value: 76 },
     { name: 'remaining', value: 100-76 },
@@ -44,31 +24,34 @@ const SalesPrediction = () => {
                 alignItems:'center',
                 gap:1,
             }}>
-                <Typography variant='h4' sx={{marginTop:'2rem',}}>76%</Typography>
+                <Typography variant='h4' sx={{marginTop:'2rem',}}>$3654</Typography>
             </Box>
             <Typography variant='caption'>(160-155 Sales)</Typography>
         </Box>
         
         
+      <Box sx={{position:'relative'}}>
       <PieChart width={150} height={100}>
-      
-      <Pie
-            data={data}
-            cx='50%'
-            cy='100%'
-            startAngle={180}
-            endAngle={0}
-            innerRadius={40}
-            outerRadius={60}
-            fill="#8884d8"
-            // paddingAngle={5}
-            dataKey="value"
-            >
-            {data.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
-            </Pie>
-      </PieChart>
+        
+        <Pie
+              data={data}
+              cx='50%'
+              cy='100%'
+              startAngle={180}
+              endAngle={0}
+              innerRadius={40}
+              outerRadius={60}
+              fill="#8884d8"
+              // paddingAngle={5}
+              dataKey="value"
+              >
+              {data.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              ))}
+              </Pie>
+        </PieChart>
+        <Typography variant='h5' sx={{textAlign:'center', marginTop:'-2rem'}}>76%</Typography>
+      </Box>
     </Paper>
   )
 }
