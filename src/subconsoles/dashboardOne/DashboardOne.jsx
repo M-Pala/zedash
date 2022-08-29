@@ -6,6 +6,7 @@ import { topBrief_props as topBrief_data  } from '../../data/dashboard1'
 import TotalRevenue from './components/TotalRevenue'
 import SalesPrediction from './components/SalesPrediction'
 import SalesDifference from './components/SalesDifference'
+import VisitSource from './components/VisitSource'
 
 const DashboardOne = () => {
   return (
@@ -36,6 +37,12 @@ const DashboardOne = () => {
                 <SalesDifference/>
             </Grid>
             
+            <Grid item xs={12} sm={6}>
+                <VisitSource/> 
+            </Grid>
+            <Grid item xs={12} sm={6}>
+                <VisitSource/> 
+            </Grid>
         </Grid>
         
     </Box>

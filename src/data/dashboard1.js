@@ -165,3 +165,24 @@ export const revenue_data = [
       2022: 540000,
     },
   ];
+
+export const visitSource_data = [
+    [
+        { name: 'Desktop', value: 40 },
+        { name: 'Mobile', value: 30 },
+        { name: 'Tablet', value: 20 },
+        { name: 'Other', value: 10 },
+    ],
+    [
+        { name: 'Desktop', value: 50 },
+        { name: 'Mobile', value: 10 },
+        { name: 'Tablet', value: 30 },
+        { name: 'Other', value: 10 },
+    ],
+    [
+        { name: 'Desktop', value: 30 },
+        { name: 'Mobile', value: 40 },
+        { name: 'Tablet', value: 10 },
+        { name: 'Other', value: 20 },
+    ],
+  ];
