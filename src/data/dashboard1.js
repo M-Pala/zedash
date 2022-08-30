@@ -186,3 +186,41 @@ export const visitSource_data = [
         { name: 'Other', value: 20 },
     ],
   ];
+
+  export const brouserStats_data = [
+    {
+        browser : 'Google Chrome',
+        img : 'https://www.freepnglogos.com/uploads/google-chrome-png-logo/google-chrome-symbol-logo-png-3.png',
+        share : '56%',
+        bg : '#D5F3F2',
+        color : '#39C449',
+    },
+    {
+        browser : 'Mozila FireFox',
+        img : 'https://brandlogos.net/wp-content/uploads/2022/02/firefox_browser-logo-brandlogos.net_.png',
+        share : '45%',
+        bg : '#D5D0F7',
+        color : '#8578DC',
+    },
+    {
+        browser : 'Safari',
+        img : 'https://www.freepnglogos.com/uploads/safari-logo-png/safari-logo-image-collection-for-download-0.png',
+        share : '20%',
+        bg : '#F8ECDC',
+        color : '#FEC34B',
+    },
+    {
+        browser : 'Microsft Edge',
+        img : 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Microsoft_Edge_logo_%282019%29.png',
+        share : '36%',
+        bg : '#F8DDDD',
+        color : '#F62D51',
+    },
+    {
+        browser : 'Opera',
+        img : 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Opera_2015_icon.svg/1200px-Opera_2015_icon.svg.png',
+        share : '26%',
+        bg : '#F8DDDD',
+        color : '#F62D51',
+    },
+]

@@ -7,6 +7,7 @@ import TotalRevenue from './components/TotalRevenue'
 import SalesPrediction from './components/SalesPrediction'
 import SalesDifference from './components/SalesDifference'
 import VisitSource from './components/VisitSource'
+import BrowserStats from './components/BrowserStats'
 
 const DashboardOne = () => {
   return (
@@ -41,7 +42,9 @@ const DashboardOne = () => {
                 <VisitSource/> 
             </Grid>
             <Grid item xs={12} sm={6}>
-                <VisitSource/> 
+                <Box sx={{display:'flex', flexDirection:'column', flex:1,justifyContent: 'center', height:'100%'}}>
+                    <BrowserStats/>
+                </Box>
             </Grid>
         </Grid>
         
