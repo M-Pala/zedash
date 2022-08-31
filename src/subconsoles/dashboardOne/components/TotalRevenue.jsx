@@ -25,17 +25,23 @@ const TotalRevenue = () => {
       window.addEventListener("resize", handleResize, false);
       setRevWidth(dimensions.width)
     }, []);
+    
+    useEffect(()=>{
+      setRevWidth(ref.current.clientWidth)
+      console.log('revWidth',revWidth);
+      console.log('ref',ref.current)
+    },[dimensions])
 
 
   return (
     <Paper variant='sub-bg'>
 
       <Typography variant='h6' sx={{paddingBottom:'1rem', width:'100%'}}>Total Revenue</Typography>
-      <div ref={ref} style={{width:`${revWidth}px`, height:'400px'}} >
-        <ResponsiveContainer width="100%" height="100%">
+      <div ref={ref} style={{width:'100%', height:'400px'}} >
+        {/* <ResponsiveContainer width='100%' height="100%"> */}
             <BarChart
-            width={900}
-            height={500}
+            width={revWidth}
+            height={400}
             data={data}
             margin={{
                 top: 20,
@@ -53,7 +59,7 @@ const TotalRevenue = () => {
             <Bar dataKey="2021" stackId="a" fill="#23aafe" />
             <Bar dataKey="2020" stackId="a" fill="#68c5ff" />
             </BarChart>
-          </ResponsiveContainer>
+          {/* </ResponsiveContainer> */}
       </div>
     </Paper>
   )

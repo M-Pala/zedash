@@ -14,7 +14,7 @@ const DashboardOne = () => {
     <>
     <Box sx={{
         flexGrow:1,
-        width: '50%',
+        width: {sm:'50%', xs:'100%'},
         margin : '0 1rem'
     }}>
         <Grid container spacing={2}>
