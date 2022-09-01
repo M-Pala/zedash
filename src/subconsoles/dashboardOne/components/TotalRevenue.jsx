@@ -28,8 +28,8 @@ const TotalRevenue = () => {
     
     useEffect(()=>{
       setRevWidth(ref.current.clientWidth)
-      console.log('revWidth',revWidth);
-      console.log('ref',ref.current)
+      // console.log('revWidth',revWidth);
+      // console.log('ref',ref.current)
     },[dimensions])
 
 

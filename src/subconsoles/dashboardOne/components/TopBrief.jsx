@@ -10,8 +10,6 @@ import {
   Bar,
 } from "recharts";
 
-import { topBrief_data as data } from '../../../data/dashboard1';
-
 const TopBrief = ({num, title, progress, chart_color, chart_data}) => {
   return (
     <Paper variant='sub-bg'>

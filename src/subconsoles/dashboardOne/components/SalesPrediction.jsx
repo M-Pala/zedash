@@ -1,7 +1,6 @@
 import { Box, Paper, Typography } from '@mui/material'
 import React from 'react'
-// import { Bar, BarChart, Cell, Pie, PieChart, Tooltip } from 'recharts'
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell} from 'recharts';
 
 const data = [
     { name: 'total', value: 76 },

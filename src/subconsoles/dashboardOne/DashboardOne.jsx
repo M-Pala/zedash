@@ -1,4 +1,4 @@
-import { Box, Grid, Paper } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import React from 'react'
 import TopBrief from './components/TopBrief'
 
@@ -15,7 +15,7 @@ const DashboardOne = () => {
     <Box sx={{
         flexGrow:1,
         width: {sm:'50%', xs:'100%'},
-        margin : '0 1rem'
+        margin :{xs:'0', sm : '0 1rem'},
     }}>
         <Grid container spacing={2}>
             {

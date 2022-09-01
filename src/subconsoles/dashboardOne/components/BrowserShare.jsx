@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import { borderRadius } from '@mui/system'
+
 import React from 'react'
 
 const BrowserShare = ({browser, img, share, bgc, color}) => {
@@ -11,7 +11,7 @@ const BrowserShare = ({browser, img, share, bgc, color}) => {
         width: '100%'
     }}>
         <Box sx={{width:'40%', display:'flex', alignItems:'center',gap:2}}>
-            <img style={{width:'3rem', height:'3rem'}} src={img}/>
+            <img style={{width:'3rem', height:'3rem'}} src={img} alt='graph'/>
             <Typography>{browser}</Typography>
         </Box>
         <Box sx={{display:'flex', alignItems:'center',gap:2}}>

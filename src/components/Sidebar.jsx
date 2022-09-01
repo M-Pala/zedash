@@ -19,10 +19,15 @@ const Sidebar = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
     return (
         <>
-    <Box sx={{width: sidebarOpen ? '15rem' : '4rem', position: 'relative'
+    <Box sx={{
+            width: sidebarOpen ? '15rem' : '4rem',
+            // height: '10rem',
+            position: 'relative', 
+            zIndex:999
     }}>
     <SidebarPaper sx={{
-        width: sidebarOpen ? '15rem' : '4rem'
+        width: sidebarOpen ? '15rem' : '4rem',
+        height: sidebarOpen ? '100%' : '8rem',
     }}>
 
         
@@ -39,13 +44,17 @@ const Sidebar = () => {
         </Box>
                 
         <Divider/>
-        <List>
-            {
-                sidebar_menu_items.map((item)=>{
-                    return <SidebarListItem linkLocation={item.linkLocation} linkName={item.linkName} linkIcon={<item.linkIcon/>} sidebarOpen = {sidebarOpen}/>
-                })
-            }
-        </List>
+        {
+            sidebarOpen &&
+        
+            <List>
+                {
+                    sidebar_menu_items.map((item)=>{
+                        return <SidebarListItem linkLocation={item.linkLocation} linkName={item.linkName} linkIcon={<item.linkIcon/>} sidebarOpen = {sidebarOpen}/>
+                    })
+                }
+            </List>
+        }
         <Button sx={{position : 'absolute', right: '0', bottom: '0'}} onClick={() => setSidebarOpen(!sidebarOpen)}>{sidebarOpen ? <MenuOpenIcon/>: <MenuIcon/>}</Button> 
     </SidebarPaper>
     </Box>
