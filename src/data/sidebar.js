@@ -9,7 +9,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 export const sidebar_menu_items = [
     {
-        linkLocation : '/dashboard1',
+        linkLocation : '/recharts',
         linkName : 'rehcarts',
         linkIcon : AccountBoxIcon
     },

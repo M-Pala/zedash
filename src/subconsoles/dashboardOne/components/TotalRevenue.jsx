@@ -1,7 +1,7 @@
 import React , {useRef, useEffect, useState} from 'react'
 
 import { Paper, Typography } from '@mui/material'
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 import { revenue_data as data } from '../../../data/dashboard1'
 
@@ -28,8 +28,6 @@ const TotalRevenue = () => {
     
     useEffect(()=>{
       setRevWidth(ref.current.clientWidth)
-      // console.log('revWidth',revWidth);
-      // console.log('ref',ref.current)
     },[dimensions])
 
 
@@ -38,7 +36,6 @@ const TotalRevenue = () => {
 
       <Typography variant='h6' sx={{paddingBottom:'1rem', width:'100%'}}>Total Revenue</Typography>
       <div ref={ref} style={{width:'100%', height:'400px'}} >
-        {/* <ResponsiveContainer width='100%' height="100%"> */}
             <BarChart
             width={revWidth}
             height={400}
@@ -59,7 +56,6 @@ const TotalRevenue = () => {
             <Bar dataKey="2021" stackId="a" fill="#23aafe" />
             <Bar dataKey="2020" stackId="a" fill="#68c5ff" />
             </BarChart>
-          {/* </ResponsiveContainer> */}
       </div>
     </Paper>
   )
