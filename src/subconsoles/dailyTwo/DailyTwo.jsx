@@ -2,7 +2,7 @@ import { doc, getDoc } from 'firebase/firestore'
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { db } from '../../utils/firebaseconfig'
-import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts'
+import {Area, AreaChart, Tooltip, XAxis, YAxis} from 'recharts'
 
 const DailyTwo = () => {
     const data = [

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Avatar, Box, Button, createTheme, Divider, FormGroup, Grid, IconButton, Input, InputLabel, OutlinedInput, Paper, Stack, styled, Tabs, TextareaAutosize, ThemeProvider, Typography} from '@mui/material'
+import {Avatar, Box, Button, createTheme, Divider, FormGroup, Grid, IconButton, InputLabel, OutlinedInput, Paper, Stack, styled, Tabs, ThemeProvider, Typography} from '@mui/material'
 import './DailyOne.css'
 import ClearIcon from '@mui/icons-material/Clear';
 

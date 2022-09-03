@@ -24,10 +24,12 @@ const TotalRevenue = () => {
     useEffect(() => {
       window.addEventListener("resize", handleResize, false);
       setRevWidth(dimensions.width)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
     useEffect(()=>{
       setRevWidth(ref.current.clientWidth)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[dimensions])
 
 
