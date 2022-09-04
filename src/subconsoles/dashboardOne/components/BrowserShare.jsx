@@ -8,7 +8,7 @@ const BrowserShare = ({browser, img, share, bgc, color}) => {
         display : 'flex',
         justifyContent:'space-between',
         padding: '1.5rem 0.5rem',
-        width: '100%'
+        width: '98%'
     }}>
         <Box sx={{width:'40%', display:'flex', alignItems:'center',gap:2}}>
             <img style={{width:'3rem', height:'3rem'}} src={img} alt='graph'/>

@@ -7,6 +7,8 @@ import SidebarListItem from './SidebarListItem';
 
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useDispatch, useSelector } from 'react-redux';
+import { closeSidebar, openSidebar } from '../features/sidebar/sidebarSlice';
 
 const SidebarPaper = styled(Paper)(({theme})=>({
     maxWidth: '18rem',
@@ -17,17 +19,28 @@ const SidebarPaper = styled(Paper)(({theme})=>({
 
 const Sidebar = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
+    const sidebarState = useSelector((state)=> state.sidebar.open)
+    const dispatch = useDispatch()
+
+    function handleSidebar(){
+        if (sidebarState){
+            dispatch(closeSidebar())
+        }
+        else{
+            dispatch(openSidebar())
+        }
+    }
     return (
         <>
     <Box sx={{
-            width: sidebarOpen ? '15rem' : '4rem',
+            width: sidebarState ? '15rem' : '4rem',
             // height: '10rem',
             position: 'relative', 
             zIndex:999
     }}>
     <SidebarPaper sx={{
-        width: sidebarOpen ? '15rem' : '4rem',
-        height: sidebarOpen ? '100%' : '8rem',
+        width: sidebarState ? '15rem' : '4rem',
+        height: sidebarState ? '100%' : '8rem',
     }}>
 
         
@@ -38,24 +51,25 @@ const Sidebar = () => {
                 textAlign: 'center'
             }} 
             variant='h4'>
-                {sidebarOpen ? 'MDashboards' : 'M' }
+                {sidebarState ? 'MDashboards' : 'M' }
             </Typography>
             
         </Box>
                 
         <Divider/>
         {
-            sidebarOpen &&
+            sidebarState &&
         
             <List>
                 {
                     sidebar_menu_items.map((item)=>{
-                        return <SidebarListItem linkLocation={item.linkLocation} linkName={item.linkName} linkIcon={<item.linkIcon/>} sidebarOpen = {sidebarOpen}/>
+                        return <SidebarListItem linkLocation={item.linkLocation} linkName={item.linkName} linkIcon={<item.linkIcon/>} sidebarOpen = {sidebarState}/>
                     })
                 }
             </List>
         }
-        <Button sx={{position : 'absolute', right: '0', bottom: '0'}} onClick={() => setSidebarOpen(!sidebarOpen)}>{sidebarOpen ? <MenuOpenIcon/>: <MenuIcon/>}</Button> 
+        {/* <Button sx={{position : 'absolute', right: '0', bottom: '0'}} onClick={() => setSidebarOpen(!sidebarOpen)}>{sidebarOpen ? <MenuOpenIcon/>: <MenuIcon/>}</Button>  */}
+        <Button sx={{position : 'absolute', right: '0', bottom: '0'}} onClick={handleSidebar}>{sidebarState ? <MenuOpenIcon/>: <MenuIcon/>}</Button> 
     </SidebarPaper>
     </Box>
     </>

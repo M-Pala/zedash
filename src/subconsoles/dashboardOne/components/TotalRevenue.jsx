@@ -4,10 +4,14 @@ import { Paper, Typography } from '@mui/material'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 import { revenue_data as data } from '../../../data/dashboard1'
+import { useSelector } from 'react-redux';
 
 const TotalRevenue = () => {
 
     const ref = useRef()
+    
+    const sidebarState = useSelector((state)=> state.sidebar.open)
+
     const [revWidth, setRevWidth] = useState(782)
     const [dimensions, setDimensions] = useState({
       width: window.innerWidth,
@@ -30,7 +34,7 @@ const TotalRevenue = () => {
     useEffect(()=>{
       setRevWidth(ref.current.clientWidth)
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[dimensions])
+    },[dimensions,sidebarState])
 
 
   return (
