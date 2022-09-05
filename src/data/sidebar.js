@@ -11,14 +11,14 @@ export const sidebar_menu_items = [
     },
     
     {
-        linkLocation : '/dashboard2',
-        linkName : 'Dashboard2',
+        linkLocation : '/chartJs',
+        linkName : 'Chart JS',
         linkIcon : FormatListBulletedIcon
     },
     
     {
-        linkLocation : '/dashboard3',
-        linkName : 'Dashboard3',
+        linkLocation : '/apexCharts',
+        linkName : 'Apex Charts',
         linkIcon : LoginIcon
     },
     
