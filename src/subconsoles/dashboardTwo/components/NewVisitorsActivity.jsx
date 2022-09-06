@@ -1,7 +1,10 @@
 import { faker } from '@faker-js/faker';
 import { Box, Paper, Typography } from '@mui/material'
 import React from 'react'
-import { Bar, Line } from 'react-chartjs-2'
+import { Bar } from 'react-chartjs-2'
+
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -72,25 +75,25 @@ export const data = {
 };
 
 
-const NewVisitorsActivity = ({dashType}) => {
+const NewVisitorsActivity = () => {
   return (
-    <Paper variant='sub-bg'>
+    <Paper variant='sub-bg' sx={{flexGrow:1}}>
       <Box sx={{display:'flex',width:'100%', justifyContent:'space-between', alignItems:'center'}}>
-        <Typography variant='h6'>News Visitors</Typography>
+        <Typography variant='h6' >New Visitors</Typography>
         <Typography variant='caption'>Last Week</Typography>
       </Box>
       <Box sx={{width:'100%',display:'flex', justifyContent:'space-between', alignItems:'flex-end'}}>
         <Box>
-          <Typography variant='h5' sx={{color:'#0066ee'}}>$24.5k</Typography>
-          <Typography variant='caption'>82% of the target</Typography>
+          <Typography variant='h4'>65%</Typography>
+          <Box sx={{
+                display:'flex',
+                alignItems:'center',
+          }}>
+            <Typography variant='caption' color='#c04b4b'>14.5%</Typography><ArrowDropDownIcon color='error' fontSize='large'/>
+          </Box>
         </Box>
         <Box>
-        {
-          dashType === 'line' ? 
             <Bar height={100} width={200} options={options} data={data} />
-            :
-            <Bar height={100} width={200} options={options} data={data} />
-        }
         </Box>
       </Box>
     </Paper>
