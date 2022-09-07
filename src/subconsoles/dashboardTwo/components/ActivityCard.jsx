@@ -3,7 +3,7 @@ import { Box, Paper, Typography } from '@mui/material'
 import React from 'react'
 import { Line } from 'react-chartjs-2'
 
-import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
 
 import 'chart.js/auto'
 
@@ -79,13 +79,14 @@ const ActivityCard = () => {
           <Typography variant='h4'>85%</Typography>
           <Box sx={{
                 display:'flex',
-                alignItems:'center',
+                alignContent:'center',
+                gap:1,
+                padding:'0.5rem 0'
           }}>
-            <Typography variant='caption' color='#4fc04b'>24.5%</Typography><ArrowDropUpIcon color='success' fontSize='large'/>
+            <Typography variant='body2' color='#4fc04b'>24.5%</Typography><ArrowUpwardOutlinedIcon color='success' fontSize='small'/>
           </Box>
         </Box>
         <Box>
-            {/* <Bar height={100} width={200} options={options} data={data} /> */}
             <Line height={100} width={200} data={data} options={options}/>
         </Box>
       </Box>

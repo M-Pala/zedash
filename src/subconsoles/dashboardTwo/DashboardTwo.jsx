@@ -1,8 +1,10 @@
 import { Box, Grid, Paper, Typography } from '@mui/material'
 import React from 'react'
 import ActivityCard from './components/ActivityCard'
+import InfoWidget from './components/InfoWidget'
 import IntroCard from './components/IntroCard'
 import NewVisitorsActivity from './components/NewVisitorsActivity'
+import ProfitCard from './components/ProfitCard'
 
 const DashboardTwo = () => {
   return (
@@ -20,6 +22,13 @@ const DashboardTwo = () => {
             </Grid>
             <Grid item xs={12} md={4} sx={{display:'flex',}}>
                 <ActivityCard/>
+            </Grid>
+
+            <Grid item xs={6} md={2}  sx={{display:'flex',}}>
+                <InfoWidget/>
+            </Grid>
+            <Grid item xs={6} md={2}>
+                <ProfitCard/>
             </Grid>
             
         </Grid>

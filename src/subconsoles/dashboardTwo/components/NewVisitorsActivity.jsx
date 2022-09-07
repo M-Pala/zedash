@@ -3,7 +3,7 @@ import { Box, Paper, Typography } from '@mui/material'
 import React from 'react'
 import { Bar } from 'react-chartjs-2'
 
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowDownwardOutlinedIcon from '@mui/icons-material/ArrowDownwardOutlined';
 
 import {
   Chart as ChartJS,
@@ -87,9 +87,11 @@ const NewVisitorsActivity = () => {
           <Typography variant='h4'>65%</Typography>
           <Box sx={{
                 display:'flex',
-                alignItems:'center',
+                alignContent:'center',
+                gap:1,
+                padding:'0.5rem 0'
           }}>
-            <Typography variant='caption' color='#c04b4b'>14.5%</Typography><ArrowDropDownIcon color='error' fontSize='large'/>
+            <Typography variant='body2' color='#c04b4b'>14.5%</Typography><ArrowDownwardOutlinedIcon color='error' fontSize='small'/>
           </Box>
         </Box>
         <Box>
